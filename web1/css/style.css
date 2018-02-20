@@ -1,0 +1,17 @@
+@import "../../node_modules/font-awesome/css/font-awesome.min.css";
+
+/* Nivel de especifidad (A mayor numero se aplican)
+a estilos en linea, <script> (0) (Ambos deberian valer 0, especialmente este)
+b id (0)
+c atributos (Class) y seudoclases
+d elementos (Nº Etiquetas HTML)
+*/
+
+h1{
+    font-size: 50px;
+}
+
+[lang="en"]{
+    color: red;
+    font-size: 20px;
+}
