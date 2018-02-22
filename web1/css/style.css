@@ -1,4 +1,5 @@
-@import "../../node_modules/font-awesome/css/font-awesome.min.css";
+/*@import "../../node_modules/font-awesome/css/font-awesome.min.css";*/
+@import "./reset.css";
 
 /* Nivel de especifidad (A mayor numero se aplican)
 a estilos en linea, <script> (0) (Ambos deberian valer 0, especialmente este)
@@ -7,11 +8,42 @@ c atributos (Class) y seudoclases
 d elementos (Nº Etiquetas HTML)
 */
 
+
+
+:root{
+    --color_principal: maroon;
+}
+
 h1{
     font-size: 50px;
 }
 
 [lang="en"]{
-    color: red;
+    color: var(--color_principal);
     font-size: 20px;
+}
+
+p[lang="en"]::first-letter{
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+}
+/*Parrafo hijo 3 de su padre*/
+p:nth-child(3){
+    color:lightcoral;
+}
+
+/*Parrafo que sea el primer hijo (Cuidado que si hay
+n hijos de algo, se aplica a algo)*/
+p:nth-of-type(1){
+    color:darkcyan;
+}
+
+ul::after{
+    content: "Aqui termina una lista";
+    content: counter()
+}
+
+ul::before{
+    content: "Aqui empieza una lista";
 }
