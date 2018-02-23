@@ -1,0 +1,13 @@
+@import "./reset.css";
+
+.container{
+    width: 60%;
+    margin: auto;
+}
+
+footer{
+    margin-top: 1rem;
+    border-style: dashed;
+    border: black;
+    border-width: 1px;
+}
